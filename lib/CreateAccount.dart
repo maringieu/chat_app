@@ -1,6 +1,7 @@
 import 'package:chat_app/Methods.dart';
 import 'package:flutter/material.dart';
 import '../HomeScreen.dart';
+import 'Custom.dart';
 
 class CreateAccount extends StatefulWidget {
   @override
@@ -44,7 +45,7 @@ class _CreateAccountState extends State<CreateAccount> {
             Container(
               width: size.width / 1.1,
               child: Text(
-                "Welcome",
+                "S'inscrire",
                 style: TextStyle(
                   fontSize: 34,
                   fontWeight: FontWeight.bold,
@@ -54,7 +55,7 @@ class _CreateAccountState extends State<CreateAccount> {
             Container(
               width: size.width / 1.1,
               child: Text(
-                "Create Account to Contiue!",
+                "Créez votre compte pour continuer !",
                 style: TextStyle(
                   color: Colors.grey[700],
                   fontSize: 20,
@@ -70,20 +71,20 @@ class _CreateAccountState extends State<CreateAccount> {
               child: Container(
                 width: size.width,
                 alignment: Alignment.center,
-                child: field(size, "Name", Icons.account_box, _name),
+                child: field(size, "Pseudo", Icons.account_box_rounded, _name),
               ),
             ),
             Container(
               width: size.width,
               alignment: Alignment.center,
-              child: field(size, "email", Icons.account_box, _email),
+              child: field(size, "E-mail", Icons.account_circle_rounded, _email),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 18.0),
               child: Container(
                 width: size.width,
                 alignment: Alignment.center,
-                child: field(size, "password", Icons.lock, _password),
+                child: field(size, "Mot de passe", Icons.lock, _password),
               ),
             ),
             SizedBox(
@@ -95,9 +96,9 @@ class _CreateAccountState extends State<CreateAccount> {
               child: GestureDetector(
                 onTap: () => Navigator.pop(context),
                 child: Text(
-                  "Login",
+                  "Se connecter",
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: Colors.black,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                   ),
@@ -144,11 +145,11 @@ class _CreateAccountState extends State<CreateAccount> {
           width: size.width / 1.2,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
-            color: Colors.blue,
+            color: Colors.black,
           ),
           alignment: Alignment.center,
           child: Text(
-            "Create Account",
+            "Créer un compte",
             style: TextStyle(
               color: Colors.white,
               fontSize: 18,

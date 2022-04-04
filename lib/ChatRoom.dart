@@ -46,6 +46,7 @@ class ChatRoom extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: StreamBuilder<DocumentSnapshot>(
           stream:
           _firestore.collection("users").doc(userMap['uid']).snapshots(),
@@ -55,10 +56,7 @@ class ChatRoom extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(userMap['name']),
-                    Text(
-                      snapshot.data!['status'],
-                      style: TextStyle(fontSize: 14),
-                    ),
+
                   ],
                 ),
               );
@@ -140,7 +138,7 @@ class ChatRoom extends StatelessWidget {
         margin: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: Colors.blue,
+          color: Colors.black,
         ),
         child: Text(
           map['message'],

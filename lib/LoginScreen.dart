@@ -18,8 +18,12 @@ class _LoginScreenState extends State<LoginScreen> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
+
+
       body: isLoading
           ? Center(
+
+
         child: Container(
           height: size.height / 20,
           width: size.height / 20,
@@ -68,14 +72,14 @@ class _LoginScreenState extends State<LoginScreen> {
             Container(
               width: size.width,
               alignment: Alignment.center,
-              child: field(size, "email", Icons.account_box, _email),
+              child: field(size, "E-mail", Icons.account_circle_rounded, _email),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 18.0),
               child: Container(
                 width: size.width,
                 alignment: Alignment.center,
-                child: field(size, "password", Icons.lock, _password),
+                child: field(size, "Mot de passe", Icons.lock, _password),
               ),
             ),
             SizedBox(
@@ -91,7 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Text(
                 "S'inscrire",
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: Colors.black,
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                 ),
@@ -135,7 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
           width: size.width / 1.2,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
-            color: Colors.blue,
+            color: Colors.black,
           ),
           alignment: Alignment.center,
           child: Text(

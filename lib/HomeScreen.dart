@@ -77,13 +77,15 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Screen"),
+        backgroundColor: Colors.black,
+        title: Text("Accueil"),
         actions: [
           IconButton(icon: Icon(Icons.logout), onPressed: () => logOut(context))
         ],
       ),
       body: isLoading
           ? Center(
+
         child: Container(
           height: size.height / 20,
           width: size.height / 20,
@@ -93,8 +95,23 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           : Column(
         children: [
           SizedBox(
-            height: size.height / 20,
+            height: size.height / 40,
           ),
+          Container(
+            height: 75,
+            width: 75,
+            decoration: BoxDecoration(
+          image: DecorationImage(
+          image: NetworkImage('https://afpaph.com/wp-content/uploads/2021/03/filled-chat.png%27'),
+          fit: BoxFit.fill,
+          ),
+          ),
+          ),
+          SizedBox(
+            height: size.height / 40,
+          ),
+
+
           Container(
             height: size.height / 14,
             width: size.width,
@@ -105,10 +122,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               child: TextField(
                 controller: _search,
                 decoration: InputDecoration(
-                  hintText: "Search",
+                  hintText: "E-mail",
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
+
                   ),
+
                 ),
               ),
             ),
@@ -118,7 +137,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
           ElevatedButton(
             onPressed: onSearch,
-            child: Text("Search"),
+            style:  ElevatedButton.styleFrom(
+              primary: Colors.black
+            ),
+            child: Text("Rechercher"),
           ),
           SizedBox(
             height: size.height / 30,
