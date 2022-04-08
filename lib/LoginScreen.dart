@@ -117,14 +117,14 @@ class _LoginScreenState extends State<LoginScreen> {
 
           logIn(_email.text, _password.text).then((user) {
             if (user != null) {
-              print("Login Sucessfull");
+              print("Connexion réussite");
               setState(() {
                 isLoading = false;
               });
               Navigator.push(
                   context, MaterialPageRoute(builder: (_) => HomeScreen()));
             } else {
-              print("Login Failed");
+              print("Echec de connexion");
               setState(() {
                 isLoading = false;
               });
